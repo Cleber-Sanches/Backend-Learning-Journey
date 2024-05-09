@@ -16,6 +16,12 @@ router.get(
   CidadesController.getAll
 );
 
+router.get(
+  '/cidades/:id',
+  CidadesController.getByIdValidation,
+  CidadesController.getById
+);
+
 router.post(
   '/cidades',
   CidadesController.createValidation,
