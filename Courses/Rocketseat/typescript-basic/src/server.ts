@@ -1,8 +1,9 @@
 import express from 'express'
+import { createCourse } from './routes/routes'
 
 const app = express()
 
-app.get('/', (request, response) => {
+app.get('/', createCourse, (request, response) => {
   return response.json({ message: 'Hello World' })
 })
 
