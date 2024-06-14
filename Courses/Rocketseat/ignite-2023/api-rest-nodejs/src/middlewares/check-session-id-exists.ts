@@ -5,7 +5,6 @@ export async function checkSesstionIdExists(
   reply: FastifyReply,
 ) {
   const sessionId = request.cookies.sessionId
-  console.log(sessionId)
 
   if (!sessionId) {
     return reply.status(401).send({
